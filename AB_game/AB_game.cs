@@ -34,8 +34,16 @@ namespace AB_game
             if (currAttempts == 0) { Submitbtn.Enabled = false; }
 
             textBox1.Text = string.Empty;
-            string joinedString = string.Join(Environment.NewLine, enteredNumList);
-            HistoryBox.Text = joinedString;
+            UpdateHistoryBox();
+        }
+
+        private void UpdateHistoryBox()
+        {
+            HistoryBox.Items.Clear();
+            foreach (string num in enteredNumList)
+            {
+                HistoryBox.Items.Add(num);
+            }
         }
 
         private void HistoryBox_SelectedIndexChanged(object sender, EventArgs e)
