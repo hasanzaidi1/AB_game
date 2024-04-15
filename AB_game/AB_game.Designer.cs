@@ -34,6 +34,8 @@
             GuessLbl = new Label();
             Attempts = new Label();
             AttemptsLeft = new Label();
+            label2 = new Label();
+            RevealBtn = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -100,11 +102,34 @@
             AttemptsLeft.Text = "-";
             AttemptsLeft.Click += AttemptsLeft_Click;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.Location = new Point(93, 187);
+            label2.Name = "label2";
+            label2.Size = new Size(57, 21);
+            label2.TabIndex = 7;
+            label2.Text = "label2";
+            label2.Visible = false;
+            // 
+            // RevealBtn
+            // 
+            RevealBtn.Location = new Point(12, 187);
+            RevealBtn.Name = "RevealBtn";
+            RevealBtn.Size = new Size(75, 23);
+            RevealBtn.TabIndex = 8;
+            RevealBtn.Text = "Reveal";
+            RevealBtn.UseVisualStyleBackColor = true;
+            RevealBtn.Click += RevealBtn_Click;
+            // 
             // AB_game
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(647, 270);
+            Controls.Add(RevealBtn);
+            Controls.Add(label2);
             Controls.Add(AttemptsLeft);
             Controls.Add(Attempts);
             Controls.Add(GuessLbl);
@@ -113,7 +138,7 @@
             Controls.Add(textBox1);
             Margin = new Padding(2);
             Name = "AB_game";
-            Text = "Form1";
+            Text = "Code Breaker";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,5 +151,7 @@
         private Label GuessLbl;
         private Label Attempts;
         private Label AttemptsLeft;
+        private Label label2;
+        private Button RevealBtn;
     }
 }
