@@ -19,10 +19,8 @@ namespace AB_game
 
         private void codemakerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Codemaker maker = new Codemaker();
-
-
-            maker.Show();
+            Codemaker codemaker = new Codemaker();
+            codemaker.Show();
         }
 
         private void codebreakerToolStripMenuItem_Click(object sender, EventArgs e)

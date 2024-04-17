@@ -37,21 +37,23 @@
             // Num
             // 
             Num.Font = new Font("Segoe UI", 11F);
-            Num.Location = new Point(356, 281);
+            Num.Location = new Point(249, 169);
+            Num.Margin = new Padding(2, 2, 2, 2);
             Num.Name = "Num";
-            Num.Size = new Size(178, 37);
+            Num.Size = new Size(126, 27);
             Num.TabIndex = 0;
             // 
             // GenerateNum
             // 
             GenerateNum.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            GenerateNum.Location = new Point(364, 138);
+            GenerateNum.Location = new Point(255, 83);
+            GenerateNum.Margin = new Padding(2, 2, 2, 2);
             GenerateNum.Name = "GenerateNum";
-            GenerateNum.Size = new Size(162, 89);
+            GenerateNum.Size = new Size(113, 53);
             GenerateNum.TabIndex = 1;
             GenerateNum.Text = "Generate Code";
             GenerateNum.UseVisualStyleBackColor = true;
-            
+            GenerateNum.Click += GenerateNum_Click;
             // 
             // GuessLbl
             // 
@@ -59,22 +61,24 @@
             GuessLbl.BackColor = Color.Black;
             GuessLbl.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             GuessLbl.ForeColor = SystemColors.ButtonFace;
-            GuessLbl.Location = new Point(345, 41);
+            GuessLbl.Location = new Point(242, 25);
+            GuessLbl.Margin = new Padding(2, 0, 2, 0);
             GuessLbl.Name = "GuessLbl";
-            GuessLbl.Size = new Size(209, 48);
+            GuessLbl.Size = new Size(143, 32);
             GuessLbl.TabIndex = 3;
             GuessLbl.Text = "Codemaker";
             // 
             // Codemaker
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(924, 450);
+            ClientSize = new Size(647, 270);
             Controls.Add(GuessLbl);
             Controls.Add(GenerateNum);
             Controls.Add(Num);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Codemaker";
             Text = "Codemaker";
             ResumeLayout(false);

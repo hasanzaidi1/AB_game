@@ -5,14 +5,14 @@ namespace AB_game
 
         public int currAttempts = 10;
         public string enteredNum;
-        List<string> enteredNumList = new List<string>();
+        List<string> enteredNumList;
         public string fourDigitNumber;
 
         public string SecretNumber { get; private set; }
 
         public Codemaker()
         {
-            SecretNumber = GenerateSecretNumber();
+            InitializeComponent();
         }
 
         // Generate a random four-digit number with no repeating digits
@@ -31,6 +31,11 @@ namespace AB_game
             }
 
             return string.Join("", digits);  // Convert List<int> to string
+        }
+
+        private void GenerateNum_Click(object sender, EventArgs e)
+        {
+            SecretNumber = GenerateSecretNumber();
         }
     }
 }
