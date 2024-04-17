@@ -16,5 +16,26 @@ namespace AB_game
         {
             InitializeComponent();
         }
+
+        private void codemakerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Codemaker maker = new Codemaker();
+
+
+            maker.Show();
+        }
+
+        private void codebreakerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Codebreaker breaker = new Codebreaker();
+
+
+            breaker.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

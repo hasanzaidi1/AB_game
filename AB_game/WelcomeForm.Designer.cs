@@ -32,6 +32,13 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            menuStrip1 = new MenuStrip();
+            gameToolStripMenuItem = new ToolStripMenuItem();
+            codemakerToolStripMenuItem = new ToolStripMenuItem();
+            codebreakerToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripSeparator();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // Group
@@ -74,6 +81,49 @@
             label3.TabIndex = 3;
             label3.Text = "Hasan Zaidi";
             // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(24, 24);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { gameToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(919, 33);
+            menuStrip1.TabIndex = 4;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // gameToolStripMenuItem
+            // 
+            gameToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { codemakerToolStripMenuItem, codebreakerToolStripMenuItem, toolStripMenuItem2, exitToolStripMenuItem });
+            gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            gameToolStripMenuItem.Size = new Size(97, 29);
+            gameToolStripMenuItem.Text = " Options";
+            // 
+            // codemakerToolStripMenuItem
+            // 
+            codemakerToolStripMenuItem.Name = "codemakerToolStripMenuItem";
+            codemakerToolStripMenuItem.Size = new Size(270, 34);
+            codemakerToolStripMenuItem.Text = "Codemaker";
+            codemakerToolStripMenuItem.Click += codemakerToolStripMenuItem_Click;
+            // 
+            // codebreakerToolStripMenuItem
+            // 
+            codebreakerToolStripMenuItem.Name = "codebreakerToolStripMenuItem";
+            codebreakerToolStripMenuItem.Size = new Size(270, 34);
+            codebreakerToolStripMenuItem.Text = "Codebreaker";
+            codebreakerToolStripMenuItem.Click += codebreakerToolStripMenuItem_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(267, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(270, 34);
+            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
             // WelcomeForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -83,8 +133,12 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Group);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Name = "WelcomeForm";
             Text = "WelcomeForm";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +149,11 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem gameToolStripMenuItem;
+        private ToolStripMenuItem codemakerToolStripMenuItem;
+        private ToolStripMenuItem codebreakerToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem2;
+        private ToolStripMenuItem exitToolStripMenuItem;
     }
 }
