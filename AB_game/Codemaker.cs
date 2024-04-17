@@ -8,7 +8,7 @@ namespace AB_game
         List<string> enteredNumList;
         public string fourDigitNumber;
 
-        public string SecretNumber { get; private set; }
+        public string SecretNumber { get; set; }
 
         public Codemaker()
         {
