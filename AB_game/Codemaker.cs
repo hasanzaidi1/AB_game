@@ -4,19 +4,20 @@ namespace AB_game
     {
 
         public int currAttempts = 10;
-        public string enteredNum;
-        List<string> enteredNumList;
-        public string fourDigitNumber;
+        //List<string> enteredNumList;
+        public string secretNumber; 
 
-        public string SecretNumber { get; set; }
+        WelcomeForm welcomeForm = new WelcomeForm();
+
 
         public Codemaker()
         {
+            secretNumber = GenerateSecretNumber();
             InitializeComponent();
         }
 
         // Generate a random four-digit number with no repeating digits
-        private string GenerateSecretNumber()
+        public string GenerateSecretNumber()
         {
             Random random = new Random();
             List<int> digits = new List<int>();
@@ -35,9 +36,21 @@ namespace AB_game
 
         private void GenerateNum_Click(object sender, EventArgs e)
         {
-            SecretNumber = GenerateSecretNumber();
-            Num.Text = SecretNumber.ToString();
+            Num.Text = secretNumber.ToString();
             GenerateNum.Enabled = false;
         }
+
+        public void CompareNum(string guessedNum)
+        {
+            if(secretNumber.Equals(guessedNum))
+            {
+                MessageBox.Show("Correct");
+            } 
+            else
+            {
+                MessageBox.Show("Not Correct ");
+            }
+        }
+
     }
 }

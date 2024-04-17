@@ -15,8 +15,7 @@ namespace AB_game
         public int currAttempts = 10;
         public string enteredNum;
         List<string> enteredNumList = new List<string>();
-        public string fourDigitNumber;
-        public string SecretNumber { get; private set; }
+
         public Codebreaker()
         {
             InitializeComponent();
@@ -34,6 +33,14 @@ namespace AB_game
                 enteredNumList.Add(enteredNum);
                 currAttempts -= 1;
             }
+
+        }
+
+        private void GuessBtn_Click(object sender, EventArgs e)
+        {
+            enteredNum = GuessTxtBox.Text.ToString();
+            Codemaker cm = new Codemaker();
+            cm.CompareNum(enteredNum);
             
         }
     }

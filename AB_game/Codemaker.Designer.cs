@@ -33,7 +33,6 @@
             GenerateNum = new Button();
             GuessLbl = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            MakeYourCodeBtn = new Button();
             SuspendLayout();
             // 
             // Num
@@ -70,17 +69,6 @@
             GuessLbl.TabIndex = 3;
             GuessLbl.Text = "Codemaker";
             // 
-            // MakeYourCodeBtn
-            // 
-            MakeYourCodeBtn.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MakeYourCodeBtn.Location = new Point(372, 83);
-            MakeYourCodeBtn.Margin = new Padding(2);
-            MakeYourCodeBtn.Name = "MakeYourCodeBtn";
-            MakeYourCodeBtn.Size = new Size(113, 53);
-            MakeYourCodeBtn.TabIndex = 4;
-            MakeYourCodeBtn.Text = "Make Your Own Code";
-            MakeYourCodeBtn.UseVisualStyleBackColor = true;
-            // 
             // Codemaker
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -88,7 +76,6 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(647, 270);
-            Controls.Add(MakeYourCodeBtn);
             Controls.Add(GuessLbl);
             Controls.Add(GenerateNum);
             Controls.Add(Num);
@@ -105,6 +92,5 @@
         private Button GenerateNum;
         private Label GuessLbl;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private Button MakeYourCodeBtn;
     }
 }
