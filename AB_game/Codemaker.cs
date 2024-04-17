@@ -36,6 +36,8 @@ namespace AB_game
         private void GenerateNum_Click(object sender, EventArgs e)
         {
             SecretNumber = GenerateSecretNumber();
+            Num.Text = SecretNumber.ToString();
+            GenerateNum.Enabled = false;
         }
     }
 }

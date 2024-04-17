@@ -32,13 +32,15 @@
             Num = new TextBox();
             GenerateNum = new Button();
             GuessLbl = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            MakeYourCodeBtn = new Button();
             SuspendLayout();
             // 
             // Num
             // 
             Num.Font = new Font("Segoe UI", 11F);
             Num.Location = new Point(249, 169);
-            Num.Margin = new Padding(2, 2, 2, 2);
+            Num.Margin = new Padding(2);
             Num.Name = "Num";
             Num.Size = new Size(126, 27);
             Num.TabIndex = 0;
@@ -47,7 +49,7 @@
             // 
             GenerateNum.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             GenerateNum.Location = new Point(255, 83);
-            GenerateNum.Margin = new Padding(2, 2, 2, 2);
+            GenerateNum.Margin = new Padding(2);
             GenerateNum.Name = "GenerateNum";
             GenerateNum.Size = new Size(113, 53);
             GenerateNum.TabIndex = 1;
@@ -68,6 +70,17 @@
             GuessLbl.TabIndex = 3;
             GuessLbl.Text = "Codemaker";
             // 
+            // MakeYourCodeBtn
+            // 
+            MakeYourCodeBtn.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MakeYourCodeBtn.Location = new Point(372, 83);
+            MakeYourCodeBtn.Margin = new Padding(2);
+            MakeYourCodeBtn.Name = "MakeYourCodeBtn";
+            MakeYourCodeBtn.Size = new Size(113, 53);
+            MakeYourCodeBtn.TabIndex = 4;
+            MakeYourCodeBtn.Text = "Make Your Own Code";
+            MakeYourCodeBtn.UseVisualStyleBackColor = true;
+            // 
             // Codemaker
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -75,10 +88,11 @@
             BackColor = Color.White;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(647, 270);
+            Controls.Add(MakeYourCodeBtn);
             Controls.Add(GuessLbl);
             Controls.Add(GenerateNum);
             Controls.Add(Num);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Codemaker";
             Text = "Codemaker";
             ResumeLayout(false);
@@ -90,5 +104,7 @@
         private TextBox Num;
         private Button GenerateNum;
         private Label GuessLbl;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button MakeYourCodeBtn;
     }
 }
