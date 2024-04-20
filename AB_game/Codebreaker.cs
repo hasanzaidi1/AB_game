@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace AB_game
 {
     public partial class Codebreaker : Form
@@ -15,10 +17,32 @@ namespace AB_game
         public int currAttempts = 10;
         public string enteredNum;
         List<string> enteredNumList = new List<string>();
+        private string secretNumber;
 
-        public Codebreaker()
+
+
+        public Codebreaker(string secretNumber)
         {
             InitializeComponent();
+            this.secretNumber = secretNumber;
+        }
+
+        private void GuessBtn_Click(object sender, EventArgs e)
+        {
+            string guessedNum = GuessTxtBox.Text;
+            if (IsNumSame(guessedNum))
+            {
+                MessageBox.Show("Correct");
+            }
+            else
+            {
+                MessageBox.Show("Try Again");
+            }
+        }
+
+        private bool IsNumSame(string guessedNum)
+        {
+            return guessedNum == secretNumber;
         }
 
         private void GuessTxtBox_TextChanged(object sender, EventArgs e)
@@ -33,15 +57,6 @@ namespace AB_game
                 enteredNumList.Add(enteredNum);
                 currAttempts -= 1;
             }
-
-        }
-
-        private void GuessBtn_Click(object sender, EventArgs e)
-        {
-            enteredNum = GuessTxtBox.Text.ToString();
-            Codemaker cm = new Codemaker();
-            cm.CompareNum(enteredNum);
-            
         }
     }
 }
