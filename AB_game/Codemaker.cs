@@ -23,7 +23,7 @@ namespace AB_game
         }
 
         private void GenerateNum_Click(object sender, EventArgs e)
-        {
+        {            
             Num.Text = secretNumber.ToString();
         }
 
