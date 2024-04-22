@@ -55,5 +55,11 @@ namespace AB_game
         {
             Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PlayersInfo playersInfo = new PlayersInfo();
+            playersInfo.Show();
+        }
     }
 }
