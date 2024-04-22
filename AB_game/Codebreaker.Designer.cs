@@ -32,7 +32,9 @@
             GuessBtn = new Button();
             GuessTxtBox = new TextBox();
             label1 = new Label();
-            correctLabel = new Label();
+            hintLabel = new Label();
+            histBox = new ListBox();
+            attemptsLeftLabel = new Label();
             SuspendLayout();
             // 
             // GuessBtn
@@ -68,14 +70,32 @@
             label1.TabIndex = 2;
             label1.Text = "Codebreakers Guess:";
             // 
-            // correctLabel
+            // hintLabel
             // 
-            correctLabel.AutoSize = true;
-            correctLabel.Location = new Point(91, 87);
-            correctLabel.Name = "correctLabel";
-            correctLabel.Size = new Size(38, 15);
-            correctLabel.TabIndex = 3;
-            correctLabel.Text = "label2";
+            hintLabel.AutoSize = true;
+            hintLabel.Font = new Font("Segoe UI", 16F);
+            hintLabel.Location = new Point(311, 105);
+            hintLabel.Name = "hintLabel";
+            hintLabel.Size = new Size(0, 30);
+            hintLabel.TabIndex = 3;
+            // 
+            // histBox
+            // 
+            histBox.FormattingEnabled = true;
+            histBox.ItemHeight = 15;
+            histBox.Location = new Point(41, 34);
+            histBox.Name = "histBox";
+            histBox.Size = new Size(132, 184);
+            histBox.TabIndex = 4;
+            // 
+            // attemptsLeftLabel
+            // 
+            attemptsLeftLabel.AutoSize = true;
+            attemptsLeftLabel.Location = new Point(443, 178);
+            attemptsLeftLabel.Name = "attemptsLeftLabel";
+            attemptsLeftLabel.Size = new Size(97, 15);
+            attemptsLeftLabel.TabIndex = 5;
+            attemptsLeftLabel.Text = "Attempts Left: 10";
             // 
             // Codebreaker
             // 
@@ -83,13 +103,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(629, 279);
-            Controls.Add(correctLabel);
+            Controls.Add(attemptsLeftLabel);
+            Controls.Add(histBox);
+            Controls.Add(hintLabel);
             Controls.Add(label1);
             Controls.Add(GuessTxtBox);
             Controls.Add(GuessBtn);
             Margin = new Padding(2);
             Name = "Codebreaker";
             Text = "Codebreaker";
+            Load += Codebreaker_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -99,6 +122,8 @@
         private Button GuessBtn;
         private TextBox GuessTxtBox;
         private Label label1;
-        private Label correctLabel;
+        private Label hintLabel;
+        private ListBox histBox;
+        private Label attemptsLeftLabel;
     }
 }
