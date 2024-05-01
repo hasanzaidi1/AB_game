@@ -63,5 +63,10 @@ namespace ABgame
         {
             this.Close();
         }
+
+        private void WelcomeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Codebreaker));
             NameLbl = new Label();
             Nametxtbox = new TextBox();
             DateLbl = new Label();
@@ -98,14 +99,14 @@
             // 
             // ATxtBox
             // 
-            ATxtBox.Location = new Point(442, 276);
+            ATxtBox.Location = new Point(439, 276);
             ATxtBox.Name = "ATxtBox";
             ATxtBox.Size = new Size(37, 31);
             ATxtBox.TabIndex = 13;
             // 
             // BTxtBox
             // 
-            BTxtBox.Location = new Point(510, 276);
+            BTxtBox.Location = new Point(508, 276);
             BTxtBox.Name = "BTxtBox";
             BTxtBox.Size = new Size(37, 31);
             BTxtBox.TabIndex = 14;
@@ -114,7 +115,7 @@
             // 
             Albl.AutoSize = true;
             Albl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            Albl.Location = new Point(476, 282);
+            Albl.Location = new Point(478, 276);
             Albl.Name = "Albl";
             Albl.Size = new Size(28, 30);
             Albl.TabIndex = 15;
@@ -124,7 +125,7 @@
             // 
             Blbl.AutoSize = true;
             Blbl.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            Blbl.Location = new Point(549, 281);
+            Blbl.Location = new Point(547, 276);
             Blbl.Name = "Blbl";
             Blbl.Size = new Size(27, 30);
             Blbl.TabIndex = 16;
@@ -153,7 +154,7 @@
             // 
             // EnterHintsBtn
             // 
-            EnterHintsBtn.Location = new Point(582, 278);
+            EnterHintsBtn.Location = new Point(582, 274);
             EnterHintsBtn.Name = "EnterHintsBtn";
             EnterHintsBtn.Size = new Size(112, 34);
             EnterHintsBtn.TabIndex = 20;
@@ -169,7 +170,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.Location = new Point(366, 345);
+            label1.Location = new Point(371, 336);
             label1.Name = "label1";
             label1.Size = new Size(96, 25);
             label1.TabIndex = 21;
@@ -178,10 +179,10 @@
             // AttemptsLbl
             // 
             AttemptsLbl.AutoSize = true;
-            AttemptsLbl.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            AttemptsLbl.Location = new Point(476, 345);
+            AttemptsLbl.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            AttemptsLbl.Location = new Point(476, 337);
             AttemptsLbl.Name = "AttemptsLbl";
-            AttemptsLbl.Size = new Size(19, 25);
+            AttemptsLbl.Size = new Size(20, 28);
             AttemptsLbl.TabIndex = 22;
             AttemptsLbl.Text = "-";
             // 
@@ -219,6 +220,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(877, 450);
             Controls.Add(ScoreL);
             Controls.Add(GameScore);

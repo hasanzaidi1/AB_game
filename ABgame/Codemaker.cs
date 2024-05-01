@@ -28,7 +28,7 @@ namespace ABgame
 
         public void LogGameplay()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+            string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\ABgame\\ABgame.mdf;Integrated Security=True";
 
             // Calculate game score each time before logging
             int totalSeconds = (int)stopwatch.Elapsed.TotalSeconds;
@@ -47,7 +47,7 @@ namespace ABgame
                     command.Parameters.AddWithValue("@PlayDateTime", DateTime.Now);
                     command.Parameters.AddWithValue("@NumberOfAttempts", guessCount);
                     command.Parameters.AddWithValue("@TotalSeconds", totalSeconds);
-                    command.Parameters.AddWithValue("@Guesses", secretNumber);
+                    command.Parameters.AddWithValue("@Guesses", GuessTxtBox.Text);
                     command.Parameters.AddWithValue("@Hints", HintLbl.Text);
                     command.Parameters.AddWithValue("@GameScore", gameScore);
 
@@ -100,6 +100,7 @@ namespace ABgame
                 HintLbl.Text = GenerateHint(guess);
             }
         }
+
 
 
 
@@ -179,7 +180,7 @@ namespace ABgame
             string guess = GuessTxtBox.Text.Trim();
 
             if (guess.Length == 4 && int.TryParse(guess, out _))
-     
+
             {
                 guessCount++;  // Increment the guess count correctly before logging
                 AttemptsLbl.Text = "Attempts: " + guessCount;
@@ -207,3 +208,4 @@ namespace ABgame
 
     }
 }
+

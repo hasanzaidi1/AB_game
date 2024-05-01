@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
             menuStrip1 = new MenuStrip();
             gameOptionsToolStripMenuItem = new ToolStripMenuItem();
             codemakerMenuStrip = new ToolStripMenuItem();
@@ -56,7 +57,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { gameOptionsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(861, 33);
+            menuStrip1.Size = new Size(962, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -96,10 +97,11 @@
             // Group
             // 
             Group.AutoSize = true;
-            Group.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
-            Group.Location = new Point(398, 33);
+            Group.BackColor = SystemColors.ScrollBar;
+            Group.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            Group.Location = new Point(385, 53);
             Group.Name = "Group";
-            Group.Size = new Size(113, 36);
+            Group.Size = new Size(107, 32);
             Group.TabIndex = 1;
             Group.Text = "Group 9";
             // 
@@ -107,7 +109,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
-            label3.Location = new Point(385, 153);
+            label3.Location = new Point(380, 173);
             label3.Name = "label3";
             label3.Size = new Size(138, 32);
             label3.TabIndex = 6;
@@ -117,7 +119,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
-            label2.Location = new Point(374, 121);
+            label2.Location = new Point(364, 141);
             label2.Name = "label2";
             label2.Size = new Size(169, 32);
             label2.TabIndex = 5;
@@ -127,7 +129,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
-            label1.Location = new Point(337, 89);
+            label1.Location = new Point(326, 109);
             label1.Name = "label1";
             label1.Size = new Size(251, 32);
             label1.TabIndex = 4;
@@ -135,24 +137,26 @@
             // 
             // CodemakerBtn
             // 
+            CodemakerBtn.BackColor = SystemColors.ScrollBar;
             CodemakerBtn.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            CodemakerBtn.Location = new Point(144, 282);
+            CodemakerBtn.Location = new Point(176, 230);
             CodemakerBtn.Name = "CodemakerBtn";
             CodemakerBtn.Size = new Size(191, 54);
             CodemakerBtn.TabIndex = 7;
             CodemakerBtn.Text = "Codemaker";
-            CodemakerBtn.UseVisualStyleBackColor = true;
+            CodemakerBtn.UseVisualStyleBackColor = false;
             CodemakerBtn.Click += CodemakerBtn_Click;
             // 
             // CodebreakerBtn
             // 
+            CodebreakerBtn.BackColor = SystemColors.ScrollBar;
             CodebreakerBtn.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            CodebreakerBtn.Location = new Point(556, 282);
+            CodebreakerBtn.Location = new Point(521, 230);
             CodebreakerBtn.Name = "CodebreakerBtn";
             CodebreakerBtn.Size = new Size(191, 54);
             CodebreakerBtn.TabIndex = 8;
             CodebreakerBtn.Text = "Codebreaker";
-            CodebreakerBtn.UseVisualStyleBackColor = true;
+            CodebreakerBtn.UseVisualStyleBackColor = false;
             CodebreakerBtn.Click += CodebreakerBtn_Click;
             // 
             // contextMenuStrip1
@@ -192,7 +196,9 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(861, 450);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(962, 450);
             Controls.Add(CodebreakerBtn);
             Controls.Add(CodemakerBtn);
             Controls.Add(label3);
@@ -203,6 +209,7 @@
             MainMenuStrip = menuStrip1;
             Name = "WelcomeForm";
             Text = "Form1";
+            Load += WelcomeForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);

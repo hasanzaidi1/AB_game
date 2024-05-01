@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Codemaker));
             NameLbl = new Label();
             Nametxtbox = new TextBox();
             SecretNumber = new Label();
@@ -214,6 +215,8 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(904, 450);
             Controls.Add(EnterGuessBtn);
             Controls.Add(ScoreLbl);
