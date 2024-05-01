@@ -28,37 +28,37 @@ namespace ABgame
             timer.Start();
         }
 
-        public void LogGameplay(string guess)
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
-            string hint = ATxtBox.Text + "A | " + BTxtBox.Text + "B";
+        //public void LogGameplay(string guess)
+        //{
+        //    string connectionString = ConfigurationManager.ConnectionStrings["MyDatabase"].ConnectionString;
+        //    string hint = ATxtBox.Text + "A | " + BTxtBox.Text + "B";
 
-            // Calculate the game score
-            int totalSeconds = (int)stopwatch.Elapsed.TotalSeconds;
-            int gameScore = CalculateGameScore(hintCount, totalSeconds); // Ensure this method returns the score correctly
-            ScoreL.Text = "Score: " + gameScore; // Assuming ScoreLbl is your score display label
+        //    // Calculate the game score
+        //    int totalSeconds = (int)stopwatch.Elapsed.TotalSeconds;
+        //    int gameScore = CalculateGameScore(hintCount, totalSeconds); // Ensure this method returns the score correctly
+        //    ScoreL.Text = "Score: " + gameScore; // Assuming ScoreLbl is your score display label
 
-            string query = @"INSERT INTO CodebreakerDB (PlayerName, GameMode, PlayDateTime, NumberOfAttempts, TotalSeconds, Guesses, Hints, GameScore)
-                     VALUES (@PlayerName, @GameMode, @PlayDateTime, @NumberOfAttempts, @TotalSeconds, @Guesses, @Hints, @GameScore)";
+        //    string query = @"INSERT INTO CodebreakerDB (PlayerName, GameMode, PlayDateTime, NumberOfAttempts, TotalSeconds, Guesses, Hints, GameScore)
+        //             VALUES (@PlayerName, @GameMode, @PlayDateTime, @NumberOfAttempts, @TotalSeconds, @Guesses, @Hints, @GameScore)";
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand(query, conn))
-                {
-                    command.Parameters.AddWithValue("@PlayerName", Nametxtbox.Text);
-                    command.Parameters.AddWithValue("@GameMode", "Codebreaker");
-                    command.Parameters.AddWithValue("@PlayDateTime", DateTime.Now);
-                    command.Parameters.AddWithValue("@NumberOfAttempts", hintCount);
-                    command.Parameters.AddWithValue("@TotalSeconds", totalSeconds);
-                    command.Parameters.AddWithValue("@Guesses", guess);
-                    command.Parameters.AddWithValue("@Hints", hint);
-                    command.Parameters.AddWithValue("@GameScore", gameScore);  // Add the game score parameter
+        //    using (SqlConnection conn = new SqlConnection(connectionString))
+        //    {
+        //        using (SqlCommand command = new SqlCommand(query, conn))
+        //        {
+        //            command.Parameters.AddWithValue("@PlayerName", Nametxtbox.Text);
+        //            command.Parameters.AddWithValue("@GameMode", "Codebreaker");
+        //            command.Parameters.AddWithValue("@PlayDateTime", DateTime.Now);
+        //            command.Parameters.AddWithValue("@NumberOfAttempts", hintCount);
+        //            command.Parameters.AddWithValue("@TotalSeconds", totalSeconds);
+        //            command.Parameters.AddWithValue("@Guesses", guess);
+        //            command.Parameters.AddWithValue("@Hints", hint);
+        //            command.Parameters.AddWithValue("@GameScore", gameScore);  // Add the game score parameter
 
-                    conn.Open();
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
+        //            conn.Open();
+        //            command.ExecuteNonQuery();
+        //        }
+        //    }
+        //}
 
 
 
@@ -92,7 +92,7 @@ namespace ABgame
                 if (codebreaker.ApplyHints(correctPositions, wrongPositions))
                 {
                     MessageBox.Show($"Filtered to {codebreaker.PossibleNumbers.Count} possible numbers.");
-                    LogGameplay(GeneratedNum.Text); // Log every hint input right after processing
+                    //LogGameplay(GeneratedNum.Text); // Log every hint input right after processing
                     if (codebreaker.PossibleNumbers.Count == 0)
                     {
                         FinishGame();

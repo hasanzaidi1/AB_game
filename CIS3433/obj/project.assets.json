@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj",
+      "projectUniqueName": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj",
       "projectName": "CIS3433",
-      "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj",
+      "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj",
       "packagesPath": "C:\\Users\\hassa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\obj\\",
+      "outputPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hassa\\AppData\\Roaming\\NuGet\\NuGet.Config",

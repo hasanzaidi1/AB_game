@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\ABgame\\ABgame.csproj": {}
+    "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\ABgame\\ABgame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\ABgame\\ABgame.csproj": {
+    "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\ABgame\\ABgame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\ABgame\\ABgame.csproj",
+        "projectUniqueName": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\ABgame\\ABgame.csproj",
         "projectName": "ABgame",
-        "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\ABgame\\ABgame.csproj",
+        "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\ABgame\\ABgame.csproj",
         "packagesPath": "C:\\Users\\hassa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\ABgame\\obj\\",
+        "outputPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\ABgame\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hassa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj": {
-                "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj"
+              "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj": {
+                "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj": {
+    "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj",
+        "projectUniqueName": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj",
         "projectName": "CIS3433",
-        "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\CIS3433.csproj",
+        "projectPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\CIS3433.csproj",
         "packagesPath": "C:\\Users\\hassa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hassa\\Downloads\\ABgameFinal\\ABgame\\CIS3433\\obj\\",
+        "outputPath": "C:\\Users\\hassa\\Downloads\\ABgameUpdatedDB\\ABgame\\CIS3433\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hassa\\AppData\\Roaming\\NuGet\\NuGet.Config",
