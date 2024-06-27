@@ -8,10 +8,9 @@ Welcome to the AB Game repository! This project is an implementation of the clas
 - [Installation](#installation)
 - [Usage](#usage)
 - [Gameplay Rules](#gameplay-rules)
-- [Example](#examples)
-- [License](#license)
-- [Contact](#contact)
+- [Example](#example)
 
+  
 ## Introduction
 
 The AB Game is a two-player game where the Codemaker creates a secret number and the Codebreaker attempts to guess it. The Codemaker provides feedback on each guess in the form of "A" and "B". "A" indicates a correct digit in the correct place, while "B" indicates a correct digit in the wrong place.
