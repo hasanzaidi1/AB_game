@@ -8,7 +8,7 @@ Welcome to the AB Game repository! This project is an implementation of the clas
 - [Installation](#installation)
 - [Usage](#usage)
 - [Gameplay Rules](#gameplay-rules)
-- [Contributing](#contributing)
+- [Example](#examples)
 - [License](#license)
 - [Contact](#contact)
 
@@ -91,6 +91,6 @@ To start the game, follow these steps:
 4. **Winning the Game:**
    - The Codebreaker wins if they correctly guess the secret number.
 
-Example:
+## Example:
 
 
