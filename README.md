@@ -91,6 +91,4 @@ To start the game, follow these steps:
    - The Codebreaker wins if they correctly guess the secret number.
 
 
-### Example:
-
 
