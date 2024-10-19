@@ -1,6 +1,6 @@
 # AB Game
 
-Welcome to the AB Game repository! This project is an implementation of the classic number-guessing game, inspired by the game Mastermind. In this game, one player sets a secret four-digit number with no repeating digits, and the other player tries to guess the number with the help of clues provided after each guess.
+Welcome to the AB Game repository! This project is an implementation of the classic number-guessing game, inspired by the game Mastermind. In this game, one player (machine) sets a secret four-digit number with no repeating digits, and the other player (machine) tries to guess the number with the help of clues provided after each guess.
 
 ## Table of Contents
 - [Introduction](#introduction)
